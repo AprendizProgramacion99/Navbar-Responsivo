@@ -1,0 +1,81 @@
+/* Reglas básicas y para pantallas grandes */
+body {
+    margin: 0px;
+}
+
+.navbar {
+    background-color: #415068;
+    display: flex;
+    /* Agregamos la regla para pantallas grandes */
+}
+
+.navbar .left,
+.navbar .right {
+    display: flex;
+    flex: 1;
+}
+
+.navbar .link {
+    display: block;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    background: #223047;
+    color: white;
+    /* Ajuste para pantallas grandes */
+}
+
+.navbar .right {
+    justify-content: flex-end;
+}
+
+.navbar .brand {
+    width: 10em;
+    text-align: center;
+    padding: 1em;
+    color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar .toogle {
+    padding: 1em;
+    color: black;
+    display: none;
+    /* Ocultamos por defecto en pantallas grandes */
+}
+
+/* Media Query para Dispositivos Pequeños (Max 48em) */
+@media (max-width: 48em) {
+
+    .navbar {
+        display: block;
+    }
+
+    .navbar>div {
+        display: none;
+    }
+
+    .navbar .toogle {
+        display: inline-block;
+        /* Mostramos el toogle para dispositivos móviles */
+    }
+
+    .navbar .brand {
+        text-align: left;
+        /* Ajuste para dispositivos móviles */
+    }
+
+    .navbar.active .toogle {
+        background: #223047;
+        color: white;
+    }
+
+    .navbar.active div {
+        display: block;
+    }
+
+
+}
